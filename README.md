@@ -27,7 +27,7 @@ npm install @josephdaw/error-handler
 ## Usage
 ### Importing
 ```javascript
-const errorhandler = require('@josephdaw/error-handler');
+const { errorhandler, CustomError} = require('@josephdaw/error-handler');
 ```
 ### Basic Usage
 In your express application, add the error handler as the last middleware.
@@ -54,6 +54,19 @@ app.use((err, req, res, next) => {
     errorHandler(err, req, res, next, logger);
 });
 ```
+
+### Using with a Custom Error
+You can pass a custom error to the error handler. The error must be an instance of the CustomError class. In the example below, we are using a custom error package. You can create your own custom error, or just pass in a generic error such as the built in Error class.
+```javascript
+const { CustomError } = require('@josephdaw/error');
+
+app.all('*', (req, res, next) => {
+    const err = new CustomError('Route Not Found', 404);
+    next(err);
+});
+```
+
+
 
 ## Issues and Requests
 Please report any bugs or feature requests via [GitHub Issues](https://github.com/josephdaw/error-handler/issues). 
