@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/josephdaw/error-handler/issues"
   },
-  "homepage": "https://github.com/josephdaw/error-handler#readme"
+  "homepage": "https://github.com/josephdaw/error-handler#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
