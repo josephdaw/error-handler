@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/josephdaw/error-handler/compare/v1.0.0...v1.1.0) (2023-09-20)
+
+
+### Features
+
+* **AsyncErrorHandler:** adding error handling for async routes ([808c4d4](https://github.com/josephdaw/error-handler/commit/808c4d4275401701c76e81d0d213bb2e4750b6e6))
+* **CustomError:** adding a custom error class ([d367507](https://github.com/josephdaw/error-handler/commit/d36750713e7d47382ed4c27b9544c64a22c21577))
+
 ## 1.0.0 (2023-09-20)
 
 
