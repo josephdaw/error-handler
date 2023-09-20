@@ -10,7 +10,14 @@ function errorHandler(err, req, res, next, logger) {
         console.error(`[${req.method} ${req.url}] ${statusCode} - ${message}`);
     }
 
-    res.status(statusCode).json({ error: message });
+    res.status(statusCode).json({ message });
+}
+
+// https://www.youtube.com/watch?v=xnedbgDoRkA&list=PL1BztTYDF-QPdTvgsjf8HOwO4ZVl_LhxS&index=93
+const asyncErrorHandler = fn => {
+    return (req, res, next) => fn(req, res, next)
+    // .then(result => next(result))
+    .catch(err => next(err))
 }
 
 class CustomError extends Error {
@@ -24,4 +31,4 @@ class CustomError extends Error {
     }
 }
 
-module.exports = { errorHandler, CustomError };
+module.exports = { errorHandler, CustomError, asyncErrorHandler };

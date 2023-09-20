@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
 });
 ```
 
-### Using with a Custom Error
+### Using with a Custom Error Class
 You can pass a custom error to the error handler. The error must be an instance of the CustomError class. In the example below, we are using a custom error package. You can create your own custom error, or just pass in a generic error such as the built in Error class.
 ```javascript
 const { CustomError } = require('@josephdaw/error');
@@ -64,6 +64,16 @@ app.all('*', (req, res, next) => {
     const err = new CustomError('Route Not Found', 404);
     next(err);
 });
+```
+### Handling Async Errors
+You can use the error handler to handle async errors. In the example below, we are using the asyncErrorHandler package to wrap our async route handlers. This will throw the error back to our global error handler.
+```javascript
+const { asyncErrorHandler } = require('@josephdaw/error-handler');
+
+app.get('/async', asyncErrorHandler(async (req, res, next) => {
+    const data = await getData();
+    res.json(data);
+}));
 ```
 
 
