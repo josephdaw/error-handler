@@ -8,7 +8,8 @@ const developmentEnvHandler = (res, error, logger) => {
     }
     
     res.status(error.statusCode).json({
-        status: error.statusCode,
+        status: error.status,
+        statusCode: error.statusCode,
         message: error.message,
         stackTrace: error.stack,
         error
@@ -23,7 +24,8 @@ const productionEnvHandler = (res, error, logger) => {
     }
 
     res.status(error.statusCode).json({
-        status: error.statusCode,
+        status: error.status,
+        statusCode: error.statusCode,
         message: error.message
     })
 }
