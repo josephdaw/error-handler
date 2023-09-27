@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/josephdaw/error-handler/compare/v1.2.0...v1.2.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* **Structure:** updating file structure, include files ([4dab834](https://github.com/josephdaw/error-handler/commit/4dab834475b7a8037224519cbe744bbf5fbb3899))
+
 ## [1.2.0](https://github.com/josephdaw/error-handler/compare/v1.1.0...v1.2.0) (2023-09-27)
 
 
