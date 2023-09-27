@@ -1,4 +1,4 @@
-const {CustomError} = require('./index');
+const {CustomError} = require('../index');
 
 describe('CustomError', () => {
     it('should set the statusCode, status, and isOperational properties correctly', () => {

@@ -1,4 +1,4 @@
-const {asyncErrorHandler} = require('./index');
+const {asyncErrorHandler} = require('../index');
 
 describe('asyncErrorHandler', () => {
     it('should call the next function with an error if the promise rejects', async () => {

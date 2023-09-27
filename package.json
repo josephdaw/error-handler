@@ -23,6 +23,13 @@
     "url": "https://github.com/josephdaw/error-handler/issues"
   },
   "homepage": "https://github.com/josephdaw/error-handler#readme",
+  "files": [
+    "index.js",
+    "src",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "devDependencies": {
     "jest": "^29.7.0"
   }

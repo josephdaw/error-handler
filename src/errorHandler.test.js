@@ -1,4 +1,4 @@
-const {errorHandler} = require('./index');
+const {errorHandler} = require('../index');
 
 describe('errorHandler', () => {
     it('should log errors to a custom logger', () => {
