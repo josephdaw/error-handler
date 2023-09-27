@@ -1,6 +1,6 @@
 'use strict';
 
-const developmentEnvHandler = (res, error, logger) => {
+const developmentEnvHandler = (error, req, res, logger) => {
     if (logger) {
         logger.error({ request: req.method, location: req.url, statusCode, message });
     } else {
@@ -16,7 +16,7 @@ const developmentEnvHandler = (res, error, logger) => {
     })
 }
 
-const productionEnvHandler = (res, error, logger) => {
+const productionEnvHandler = (error, req, res, logger) => {
     if (logger) {
         logger.error({ request: req.method, location: req.url, statusCode, message });
     } else {
@@ -35,9 +35,9 @@ function errorHandler(error, req, res, next, logger) {
     error.message = error.message || 'Internal Server Error';
 
     if (process.env.NODE_ENV === 'development'){
-        developmentEnvHandler(res, error, logger)
+        developmentEnvHandler(error, req, res, logger)
     } else {
-        productionEnvHandler(res, error, logger)
+        productionEnvHandler(error, req, res, logger)
     }
 }
 
