@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/josephdaw/error-handler/compare/v1.1.0...v1.2.0) (2023-09-27)
+
+
+### Features
+
+* **Output:** adding status to response object ([3bc487c](https://github.com/josephdaw/error-handler/commit/3bc487c47678b30dce5356737cee8d643c86b5f9))
+* **Security:** less information provided in production environments ([dacd733](https://github.com/josephdaw/error-handler/commit/dacd7333a766dda3c6536e675828dc169c7972cf))
+
+
+### Bug Fixes
+
+* **Error Handler:** adding request to function parameters ([045db97](https://github.com/josephdaw/error-handler/commit/045db97b08a282e0ca99b260b957abb7f5b5debd))
+* **Tests:** updating test suite for res object ([422bb65](https://github.com/josephdaw/error-handler/commit/422bb65f6731afe069d31c174f0a82f7573ddd4b))
+
 ## [1.1.0](https://github.com/josephdaw/error-handler/compare/v1.0.0...v1.1.0) (2023-09-20)
 
 
