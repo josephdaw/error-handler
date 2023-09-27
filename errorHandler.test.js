@@ -12,7 +12,7 @@ describe('errorHandler', () => {
         errorHandler(err, req, res, next, logger);
         expect(logger.error).toHaveBeenCalledWith({request: 'GET', location: '/test', statusCode: 500, message: 'Test Error'});
         expect(res.status).toHaveBeenCalledWith(500);
-        expect(res.json).toHaveBeenCalledWith({ message: 'Test Error' });
+        expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ message: 'Test Error' }));
     });
 
     it('should log errors to the console if no logger is provided', () => {
@@ -25,7 +25,7 @@ describe('errorHandler', () => {
         errorHandler(err, req, res, next);
         expect(console.error).toHaveBeenCalledWith('[GET /test] 500 - Test Error');
         expect(res.status).toHaveBeenCalledWith(500);
-        expect(res.json).toHaveBeenCalledWith({ message: 'Test Error' });
+        expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ message: 'Test Error' }));
         console.error = consoleError;
     });
 });

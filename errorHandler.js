@@ -18,9 +18,9 @@ const developmentEnvHandler = (error, req, res, logger) => {
 
 const productionEnvHandler = (error, req, res, logger) => {
     if (logger) {
-        logger.error({ request: req.method, location: req.url, statusCode, message });
+        logger.error({ request: req.method, location: req.url, statusCode: error.statusCode, message: error.message });
     } else {
-        console.error(`[${req.method} ${req.url}] ${statusCode} - ${message}`);
+        console.error(`[${req.method} ${req.url}] ${error.statusCode} - ${error.message}`);
     }
 
     res.status(error.statusCode).json({
