@@ -4,7 +4,7 @@
   "description": "a custom error handler for a node.js and express application.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
