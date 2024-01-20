@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/josephdaw/error-handler/compare/v1.2.1...v1.2.2) (2024-01-20)
+
+
+### Bug Fixes
+
+* **Development Error Handler:** fix undefined variable errors ([662fd74](https://github.com/josephdaw/error-handler/commit/662fd74ca0845790b1225f44a1f2d32b543b936d))
+
 ## [1.2.1](https://github.com/josephdaw/error-handler/compare/v1.2.0...v1.2.1) (2023-09-27)
 
 
