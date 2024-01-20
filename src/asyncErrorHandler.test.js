@@ -11,7 +11,7 @@ describe('asyncErrorHandler', () => {
         expect(next).toHaveBeenCalledWith(new Error('Test Error'));
     });
 
-    it.skip('should call the next function with the result if the promise resolves', async () => {
+    it('should call the next function with the result if the promise resolves', async () => {
         const fn = jest.fn().mockResolvedValue('Test Result');
         const req = {};
         const res = {};
@@ -20,4 +20,5 @@ describe('asyncErrorHandler', () => {
         await asyncFn(req, res, next);
         expect(next).toHaveBeenCalledWith('Test Result');
     });
+    
 });
